@@ -19,5 +19,6 @@ public class Student {
     private String lastname;
     private String email;
     private String address;
+    private int teleNo;
     //String dob;
 }

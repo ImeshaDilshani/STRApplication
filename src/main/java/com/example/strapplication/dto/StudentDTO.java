@@ -13,6 +13,7 @@ public class StudentDTO {
     private String lastname;
     private String email;
     private String address;
+    private int teleNo;
     //private String dob;
 
 }
