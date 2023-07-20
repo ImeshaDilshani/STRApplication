@@ -10,18 +10,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
+// The StudentService class is a service component responsible for handling business logic related to students.
 public class StudentService {
     @Autowired
-    StudentRepository studentRepository;
+    StudentRepository studentRepository;//injects the StudentRepository instance into this service, allowing interaction with the database.
 
     @Autowired
-    private ModelMapper modelMapper;
+    private ModelMapper modelMapper;//injects the ModelMapper instance, which is used to map between StudentDTO and Student entities.
 
-
+    // The saveStudent method is used to save a student to the database. It takes a StudentDTO as input,
+    // maps it to a Student entity using the modelMapper, and then saves the entity to the database using the studentRepository.
     public StudentDTO saveStudent(StudentDTO studentDTO){
         studentRepository.save(modelMapper.map(studentDTO,Student.class));
-        return studentDTO;
+        return studentDTO;// Returns the input StudentDTO as it is after saving (not modified).
     }
-
-
 }
