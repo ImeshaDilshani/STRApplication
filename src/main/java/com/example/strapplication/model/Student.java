@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -14,11 +15,10 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
-
     private String firstname;
     private String lastname;
+    private int age;
     private String email;
+    //private String phoneNo;
     private String address;
-    private int teleNo;
-    //String dob;
 }
