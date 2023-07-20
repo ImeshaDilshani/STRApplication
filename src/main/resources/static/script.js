@@ -8,7 +8,6 @@ function saveStudent(){
     let lastName = $('#lastName').val();
     let age = $('#age').val();
     let email = $('#email').val();
-    //let phoneNo = $('#phoneNo');
     let address = $('#address').val();
 
     $.ajax({
@@ -22,7 +21,6 @@ function saveStudent(){
             "lastname":lastName,
             "age":age,
             "email":email,
-            //"phoneNo":phoneNo,
             "address":address
         }),
 
